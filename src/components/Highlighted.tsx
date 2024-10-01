@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 interface HighlightedProps {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     articles?: Array<any>;
 }
 
@@ -10,6 +11,9 @@ const Highlighted: React.FC<HighlightedProps> = ({ articles }) => {
 
     return (
         <div className="block md:flex md:space-x-2 px-2 lg:p-0">
+            {
+                articles?.map((article, index) => (<span key={index}>{article.title}</span>))
+            }
             <Link className="mb-4 md:mb-0 w-full md:w-2/3 relative rounded inline-block" style={{ height: '24em' }} href="#">
                 <div className="absolute left-0 bottom-0 w-full h-full z-10" style={{ backgroundImage: 'linear-gradient(180deg,transparent,rgba(0,0,0,.7))' }}></div>
                 <Image width={10} height={10} alt="" src="https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2100&amp;q=80" className="absolute left-0 top-0 w-full h-full rounded z-0 object-cover" />

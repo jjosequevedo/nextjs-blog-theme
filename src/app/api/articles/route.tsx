@@ -5,12 +5,13 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const result = await axios.get(process.env.API_DOMAIN + process.env.API_ARTICLES);
+    const result = await axios.get(process.env.API_DOMAIN?.concat(process.env.API_ARTICLES || "") || "");
     const data = result.data.data;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const articles = data.map(async (article: any) => {
 
-      let imageResult = await axios.get(article.relationships.field_image.links.related.href);
+      const imageResult = await axios.get(article.relationships.field_image.links.related.href);
 
       return {
         full_desc: article.attributes.body.value,
