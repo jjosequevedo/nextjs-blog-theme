@@ -6,6 +6,7 @@ import Highlighted from "@/components/Highlighted";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { IArticle } from "./interfaces";
+import CardList from "@/components/CardList";
 
 const Home = () => {
 
@@ -23,7 +24,7 @@ const Home = () => {
       <main className="mt-10">
         <Highlighted articles={articles.slice(0, 2)} />
         <div className="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
-          
+          <CardList articles={articles.slice(2, 7)} />
         </div>
       </main>
       <Footer />
