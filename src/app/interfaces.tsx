@@ -13,10 +13,15 @@ export interface IArticle {
     };
 }
 
-export interface HomeProps {
+interface CommonProps {
     articles?: Array<IArticle>
 }
 
-export interface HighlightedProps {
-    articles?: Array<IArticle>;
+export interface CardListProps extends CommonProps {
+}
+
+export interface HomeProps extends CommonProps {
+}
+
+export interface HighlightedProps extends CommonProps {
 }

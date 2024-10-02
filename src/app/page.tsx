@@ -22,6 +22,9 @@ const Home = () => {
       <Header />
       <main className="mt-10">
         <Highlighted articles={articles.slice(0, 2)} />
+        <div className="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
+          
+        </div>
       </main>
       <Footer />
     </div>
