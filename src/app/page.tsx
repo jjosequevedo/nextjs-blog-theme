@@ -5,10 +5,11 @@ import Header from "@/components/Header";
 import Highlighted from "@/components/Highlighted";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { IArticle } from "./interfaces";
 
 const Home = () => {
 
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState<Array<IArticle>>([]);
 
   useEffect(() => {
     axios.get('/api/articles').then(response => {
