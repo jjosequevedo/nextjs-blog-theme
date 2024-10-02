@@ -17,14 +17,18 @@ interface CommonProps {
     articles?: Array<IArticle>
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface CardListProps extends CommonProps {
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface HomeProps extends CommonProps {
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface HighlightedProps extends CommonProps {
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface SideBarProps extends CommonProps {
 }
