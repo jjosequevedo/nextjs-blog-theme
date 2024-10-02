@@ -25,3 +25,6 @@ export interface HomeProps extends CommonProps {
 
 export interface HighlightedProps extends CommonProps {
 }
+
+export interface SideBarProps extends CommonProps {
+}

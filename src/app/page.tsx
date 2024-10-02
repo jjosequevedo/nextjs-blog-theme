@@ -7,6 +7,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { IArticle } from "./interfaces";
 import CardList from "@/components/CardList";
+import SideBar from "@/components/SideBar";
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
         <Highlighted articles={articles.slice(0, 2)} />
         <div className="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
           <CardList articles={articles.slice(2, 7)} />
+          <SideBar articles={articles} />
         </div>
       </main>
       <Footer />
